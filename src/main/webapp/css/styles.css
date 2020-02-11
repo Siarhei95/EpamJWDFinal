@@ -1,0 +1,36 @@
+body {
+    font-family: 'Playfair Display', -apple-system, system-ui, BlinkMacSystemFont, SansSerif,
+    Roboto, "Helvetica Neue", Algerian, fantasy;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212512;
+    background-color: #fffaf6;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #212567;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fd7578;
+    font-weight: bold;
+}
+
