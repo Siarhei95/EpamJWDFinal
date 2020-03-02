@@ -9,8 +9,6 @@ public class ConstantNameFromJsp {
     public static final String PASSWORD = "password";
     public static final String REVIEW = "review";
     public static final String MESSAGE = "message";
-    public static final String NAMEUSER = "nameUser";
-
 
     public static final String GENDER = "gender";
     public static final String YEAR_OLD = "year_old";

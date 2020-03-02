@@ -5,6 +5,8 @@ import java.util.ResourceBundle;
 
 public enum LocaleType {
     EN(ResourceBundle.getBundle("messages", new Locale("en", "US"))),
+    BE(ResourceBundle.getBundle("messages", new Locale("be", "BY"))),
+    DE(ResourceBundle.getBundle("messages", new Locale("de", "DE"))),
     RU(ResourceBundle.getBundle("messages", new Locale("ru", "RU")));
 
     private ResourceBundle bundle;

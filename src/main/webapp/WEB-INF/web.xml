@@ -33,32 +33,206 @@
         </taglib>
     </jsp-config>
 
+    <servlet>
+        <servlet-name>main-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/main.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>main-jsp</servlet-name>
+        <url-pattern>/jsp/main.jsp</url-pattern>
+    </servlet-mapping>
 
-<!--    <servlet>-->
-<!--        <servlet-name>controller</servlet-name>-->
-<!--        <servlet-class>by.epam.fitnesscenter.controller.Controller</servlet-class>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>controller</servlet-name>-->
-<!--        <url-pattern>/controller</url-pattern>-->
-<!--    </servlet-mapping>-->
-<!--    <servlet>-->
-<!--        <servlet-name>LoginPage</servlet-name>-->
-<!--        <jsp-file>WEB-INF/login.jsp</jsp-file>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>LoginPage</servlet-name>-->
-<!--        <url-pattern>WEB-INF/login.jsp</url-pattern>-->
-<!--    </servlet-mapping>-->
+    <servlet>
+        <servlet-name>trainerList-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/trainer_list.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>trainerList-jsp</servlet-name>
+        <url-pattern>/jsp/trainer_list.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>reviews-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/reviews.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>reviews-jsp</servlet-name>
+        <url-pattern>/jsp/reviews.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registrationReview-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/registration_review.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registrationReview-jsp</servlet-name>
+        <url-pattern>/jsp/registration_review.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registration-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/registration.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registration-jsp</servlet-name>
+        <url-pattern>/jsp/registration.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>login-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/login.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login-jsp</servlet-name>
+        <url-pattern>/jsp/login.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>gallery-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/gallery.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gallery-jsp</servlet-name>
+        <url-pattern>/jsp/gallery.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>contacts-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/contacts.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>contacts-jsp</servlet-name>
+        <url-pattern>/jsp/contacts.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>footer-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/util/footer.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>footer-jsp</servlet-name>
+        <url-pattern>/jsp/util/footer.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>head_link-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/util/head_link.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>head_link-jsp</servlet-name>
+        <url-pattern>/jsp/util/head_link.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>header-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/util/header.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>header-jsp</servlet-name>
+        <url-pattern>/jsp/util/header.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>trainer_cabinet-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/trainer/trainer_cabinet.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>trainer_cabinet-jsp</servlet-name>
+        <url-pattern>/jsp/trainer/trainer_cabinet.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>update_profile-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/trainer/update_profile.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>update_profile-jsp</servlet-name>
+        <url-pattern>/jsp/trainer/update_profile.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>error-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/error/error.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>error-jsp</servlet-name>
+        <url-pattern>/jsp/error/error.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>client_cabinet-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/client/client_cabinet.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>client_cabinet-jsp</servlet-name>
+        <url-pattern>/jsp/client/client_cabinet.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>order-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/client/order.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>order-jsp</servlet-name>
+        <url-pattern>/jsp/client/order.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>order_payment-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/client/order_payment.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>order_payment-jsp</servlet-name>
+        <url-pattern>/jsp/client/order_payment.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>update_profile_client-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/client/update_profile.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>update_profile_client-jsp</servlet-name>
+        <url-pattern>/jsp/client/update_profile.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>admin_cabinet-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/admin/admin_cabinet.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>admin_cabinet-jsp</servlet-name>
+        <url-pattern>/jsp/admin/admin_cabinet.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>all_info-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/admin/all_info.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>all_info-jsp</servlet-name>
+        <url-pattern>/jsp/admin/all_info.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>video-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/video.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>video-jsp</servlet-name>
+        <url-pattern>/jsp/video.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>food-jsp</servlet-name>
+        <jsp-file>/WEB-INF/jsp/food.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>food-jsp</servlet-name>
+        <url-pattern>/jsp/food.jsp</url-pattern>
+    </servlet-mapping>
 
 
-<!--    <servlet>-->
-<!--        <servlet-name>Trainer_list</servlet-name>-->
-<!--        <jsp-file>/trainer_list.jsp</jsp-file>-->
-<!--    </servlet>-->
-<!--    <servlet-mapping>-->
-<!--        <servlet-name>Trainer_list</servlet-name>-->
-<!--        <url-pattern>/trainer-list-jsp</url-pattern>-->
-<!--    </servlet-mapping>-->
+
+
 
 </web-app>
