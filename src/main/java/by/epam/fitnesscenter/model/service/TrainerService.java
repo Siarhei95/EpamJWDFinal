@@ -1,6 +1,5 @@
 package by.epam.fitnesscenter.model.service;
 
-import by.epam.fitnesscenter.model.dao.ReviewDao;
 import by.epam.fitnesscenter.model.dao.TrainerDao;
 import by.epam.fitnesscenter.model.dao.impl.TrainerDaoImpl;
 import by.epam.fitnesscenter.model.entity.Trainer;
@@ -12,8 +11,9 @@ import java.util.List;
 
 public class TrainerService {
 
+    private TrainerDao trainerDAO = new TrainerDaoImpl();
+
     public void createTrainer(Trainer trainer) throws LogicException {
-        TrainerDao trainerDAO = new TrainerDaoImpl();
         try {
             trainer.setPassword(MD5.encrypt(trainer.getPassword()));
             trainerDAO.createTrainer(trainer);
@@ -23,7 +23,6 @@ public class TrainerService {
     }
 
     public List<Trainer> findAllTrainers() throws LogicException {
-        TrainerDao trainerDAO = new TrainerDaoImpl();
         try {
             return trainerDAO.findAllTrainers();
         } catch (DaoException e) {
@@ -32,7 +31,6 @@ public class TrainerService {
     }
 
     public Trainer findTrainerById(long id) throws LogicException {
-        TrainerDao trainerDAO = new TrainerDaoImpl();
         try {
             return trainerDAO.findTrainerById(id).get();
         } catch (DaoException e) {
@@ -41,7 +39,6 @@ public class TrainerService {
     }
 
     public Trainer findTrainerByEmail(String email) throws LogicException {
-        TrainerDao trainerDAO = new TrainerDaoImpl();
         try {
             return trainerDAO.findTrainerByEmail(email).get();
         } catch (DaoException e) {
@@ -50,7 +47,6 @@ public class TrainerService {
     }
 
     public void updateTrainer(Trainer trainer) throws LogicException {
-        TrainerDao trainerDAO = new TrainerDaoImpl();
         try {
             trainerDAO.updateTrainer(trainer);
         } catch (DaoException e) {
@@ -59,7 +55,6 @@ public class TrainerService {
     }
 
     public void deleteTrainerById(long id) throws LogicException {
-        TrainerDao trainerDAO = new TrainerDaoImpl();
         try {
             trainerDAO.deleteTrainerById(id);
         } catch (DaoException e) {

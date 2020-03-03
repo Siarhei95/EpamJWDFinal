@@ -13,7 +13,7 @@ public class Trainer extends User {
     public Trainer(User user) {
         super(user.getRole(), user.getName(), user.getSurname(), user.getGender(), user.getYearOld(),
                 user.getEmail(), user.getPassword());
-        this.education = "master";
+        this.education = "Beginner";
         this.costPerOneWorkout = 10.0;
     }
 

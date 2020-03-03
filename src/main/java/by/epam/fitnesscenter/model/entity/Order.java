@@ -30,7 +30,7 @@ public class Order {
         this.typeOfWorkout = typeOfWorkout;
         this.numberOfWorkout = numberOfWorkout;
         this.idTrainer = idTrainer;
-        this.equipment = "water";
+        this.equipment = "indefined";
         this.description = "for health";
         this.idClient = idClient;
         this.paid = paid;

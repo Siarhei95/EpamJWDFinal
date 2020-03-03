@@ -47,6 +47,4 @@ public class AdminShowInfoCommand implements Command {
         page = ConfigurationManager.getProperty("path.page.admin.allinfo");
         return new CommandRouter(CommandRouter.DispatchType.REDIRECT, page);
     }
-
-
 }

@@ -22,10 +22,10 @@
             <form name="reviewReg" method="POST" action="${pageContext.request.contextPath}/controller">
                 <input type="hidden" name="command" value="registration_review"/>
 
-                <form action="#" class="form"
-                      onsubmit="document.querySelector('.info.container').textContent = 'Успешно отправлено.';"
-                      target="formFrame">
-                    <iframe name="formFrame" style="display:none;"></iframe>
+<%--                <form action="#" class="form"--%>
+<%--                      onsubmit="document.querySelector('.info.container').textContent = 'Успешно отправлено.';"--%>
+<%--                      target="formFrame">--%>
+<%--                    <iframe name="formFrame" style="display:none;"></iframe>--%>
 
                 <div class="row form-group">
                     <div class="col">
@@ -71,16 +71,14 @@
                     </div>
                 </c:if>
 
+<%--                        <div class="'.info.container">--%>
+<%--                    <button class="btn btn-primary" type="submit"><fmt:message key="bt.reg.rev.add" bundle="${var}"/></button>--%>
+<%--                        </div>--%>
 
-                        <div class="info container">
-                    <button class="btn btn-primary" type="submit"><fmt:message key="bt.reg.rev.add" bundle="${var}"/></button>
-                        </div>
-
-
-<%--                <div class="text-center">--%>
-<%--                    <button type="submit" class="btn btn-outline-dark">--%>
-<%--                        <fmt:message key="bt.reg.rev.add" bundle="${var}"/></button>--%>
-<%--                </div>--%>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-outline-dark">
+                        <fmt:message key="bt.reg.rev.add" bundle="${var}"/></button>
+                </div>
             </form>
             </form>
         </div>

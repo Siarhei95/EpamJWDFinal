@@ -15,13 +15,6 @@ public enum LocaleType {
         this.bundle = bundle;
     }
 
-    public static LocaleType defineLocale(String locale) {
-        if (locale == null) {
-            return EN;
-        }
-        return "ru_RU".equals(locale) ? RU : EN;
-    }
-
     public String getProperty(String key) {
         return bundle.getString(key);
     }

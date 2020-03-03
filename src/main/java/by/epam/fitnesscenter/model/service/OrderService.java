@@ -18,10 +18,11 @@ import java.util.List;
 import java.util.Optional;
 
 public class OrderService {
+
     private static final Logger LOG = LogManager.getLogger();
+    private OrderDao orderDAO = new OrderDaoImpl();
 
     public void createOrder(Order order) throws LogicException {
-        OrderDao orderDAO = new OrderDaoImpl();
         try {
             orderDAO.createOrder(order);
         } catch (DaoException e) {
@@ -30,7 +31,6 @@ public class OrderService {
     }
 
     public List<Order> findAllOrders() throws LogicException {
-        OrderDao orderDAO = new OrderDaoImpl();
         try {
             return orderDAO.findAllOrders();
         } catch (DaoException e) {
@@ -39,7 +39,6 @@ public class OrderService {
     }
 
     public List<Order> findAllOrdersByIdTrainer(long id) throws LogicException {
-        OrderDao orderDAO = new OrderDaoImpl();
         try {
             return orderDAO.findAllOrdersByIdTrainer(id);
         } catch (DaoException e) {
@@ -48,7 +47,6 @@ public class OrderService {
     }
 
     public Order findOrderById(Long id) throws LogicException {
-        OrderDao orderDAO = new OrderDaoImpl();
         try {
             return orderDAO.findOrderById(id).get();
         } catch (DaoException e) {
@@ -57,7 +55,6 @@ public class OrderService {
     }
 
     public void updateOrder(Order order) throws LogicException {
-        OrderDao orderDAO = new OrderDaoImpl();
         try {
             orderDAO.updateOrder(order);
         } catch (DaoException e) {
@@ -66,7 +63,6 @@ public class OrderService {
     }
 
     public void deleteOrderById(long id) throws LogicException {
-        OrderDao orderDAO = new OrderDaoImpl();
         try {
             orderDAO.deleteOrderById(id);
         } catch (DaoException e) {
@@ -75,7 +71,6 @@ public class OrderService {
     }
 
     public void payOrderWithDiscount(Order order, double discount) throws LogicException {
-        OrderDao orderDAO = new OrderDaoImpl();
         ClientDao clientDAO = new ClientDaoImpl();
         try {
             long idClient = order.getIdClient();

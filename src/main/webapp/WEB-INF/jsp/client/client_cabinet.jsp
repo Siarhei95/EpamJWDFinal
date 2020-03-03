@@ -72,19 +72,27 @@
             </div>
 
             <div class="form-group row">
-                <div class="col-3">
+                <div class="btn btn-success">
                     <a href="${pageContext.request.contextPath}/jsp/client/order.jsp">
                         <fmt:message key="href.clientcabinet.makeorder" bundle="${var}"/></a>
                 </div>
-                <div class="col">
+
+                <div class="btn btn-warning">
                     <a href="${pageContext.request.contextPath}/jsp/client/update_profile.jsp">
                         <fmt:message key="href.clientcabinet.updateprofile" bundle="${var}"/></a>
                 </div>
 
-                <div class="btn">
+                <div class="btn btn-danger">
                     <div class="col-3">
                         <a href="${pageContext.request.contextPath}/jsp/registration_review.jsp">
                             <fmt:message key="text.reg.rev" bundle="${var}"/></a>
+                    </div>
+                </div>
+
+                <div class="btn btn-primary">
+                    <div class="col-3">
+                        <a href="${pageContext.request.contextPath}/jsp/food.jsp">
+                            <fmt:message key="title.food" bundle="${var}"/></a>
                     </div>
                 </div>
             </div>
@@ -132,13 +140,15 @@
                     </div>
                 </c:if>
 
-                <div class="text-center">
-                    <a href="${pageContext.request.contextPath}/controller?command=order_payment">
-                        <fmt:message key="table.client.button.gotopay" bundle="${var}"/></a>
 
-                    <button type="submit" class="btn btn-outline-danger" name="refuse">
+                <center><div class="text-center btn btn-outline-success">
+                     <a href="${pageContext.request.contextPath}/controller?command=order_payment">
+                        <fmt:message key="table.client.button.gotopay" bundle="${var}"/></a>
+                </div><br><br><div>
+                <button type="submit" class="btn btn-outline-danger" name="refuse">
                         <fmt:message key="table.client.button.refuse" bundle="${var}"/></button>
-                </div>
+                </div></center>
+
             </form>
         </div>
     </div>

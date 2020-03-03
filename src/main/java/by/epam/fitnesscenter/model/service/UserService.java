@@ -12,10 +12,11 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserService {
+
     private final Pattern pattern = Pattern.compile("/jsp.+");
+    private UserDao userDAO = new UserDaoImpl();
 
     public List<User> findAllUsers() throws LogicException {
-        UserDao userDAO = new UserDaoImpl();
         try {
             return userDAO.findAllUsers();
         } catch (DaoException e) {
@@ -24,7 +25,6 @@ public class UserService {
     }
 
     public User findUserById(long id) throws LogicException {
-        UserDao userDAO = new UserDaoImpl();
         try {
             return userDAO.findUserById(id).get();
         } catch (DaoException e) {
@@ -33,7 +33,6 @@ public class UserService {
     }
 
     public User findUserByEmailAndPassword(String login, String password) throws LogicException {
-        UserDao userDAO = new UserDaoImpl();
         try {
             return userDAO.findUserByEmailAndPassword(login, MD5.encrypt(password));
         } catch (DaoException e) {
@@ -42,7 +41,6 @@ public class UserService {
     }
 
     public User updateUser(User user) throws LogicException {
-        UserDao userDAO = new UserDaoImpl();
         try {
             return userDAO.updateUser(user);
         } catch (DaoException e) {
@@ -51,7 +49,6 @@ public class UserService {
     }
 
     public void deleteUser(long id) throws LogicException {
-        UserDao userDAO = new UserDaoImpl();
         try {
             userDAO.deleteUserById(id);
         } catch (DaoException e) {
@@ -60,7 +57,6 @@ public class UserService {
     }
 
     public void blockUserById(long id) throws LogicException {
-        UserDao userDAO = new UserDaoImpl();
         try {
             userDAO.blockUserById(id);
         } catch (DaoException e) {
@@ -69,7 +65,6 @@ public class UserService {
     }
 
     public void unblockUserById(long id) throws LogicException {
-        UserDao userDAO = new UserDaoImpl();
         try {
             userDAO.unblockUserById(id);
         } catch (DaoException e) {

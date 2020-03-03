@@ -223,7 +223,7 @@ public class OrderDaoImpl implements OrderDao {
         statement.setString(1, order.getTypeOfWorkout());
         statement.setInt(2, order.getNumberOfWorkout());
         statement.setLong(3, order.getIdTrainer());
-        statement.setString(4, "Water");
+        statement.setString(4, "Indefined");
         statement.setString(5, "For health");
         statement.setLong(6, order.getIdClient());
         statement.setByte(7, modifyIsPaidToByte(order.isPaid()));

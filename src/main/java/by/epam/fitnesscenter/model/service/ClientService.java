@@ -15,8 +15,9 @@ import java.util.Optional;
 
 public class ClientService {
 
+    private ClientDao clientDAO = new ClientDaoImpl();
+
     public void createClient(Client client) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             client.setPassword(MD5.encrypt(client.getPassword()));
             clientDAO.createClient(client);
@@ -26,7 +27,6 @@ public class ClientService {
     }
 
     public List<Client> findAllClients() throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             return clientDAO.findAllClients();
         } catch (DaoException e) {
@@ -35,7 +35,6 @@ public class ClientService {
     }
 
     public Client findClientById(long id) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             return clientDAO.findClientById(id).get();
         } catch (DaoException e) {
@@ -44,7 +43,6 @@ public class ClientService {
     }
 
     public Client findClientByEmail(String email) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             return clientDAO.findClientByEmail(email).get();
         } catch (DaoException e) {
@@ -53,7 +51,6 @@ public class ClientService {
     }
 
     public void updateClient(Client client) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             clientDAO.updateClient(client);
         } catch (DaoException e) {
@@ -62,7 +59,6 @@ public class ClientService {
     }
 
     public void deleteClientById(long id) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             clientDAO.deleteClientById(id);
         } catch (DaoException e) {
@@ -71,7 +67,6 @@ public class ClientService {
     }
 
     public List<Order> findAllOrderByIdClients(long idClient) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             return clientDAO.findAllOrderByIdClient(idClient);
         } catch (DaoException e) {
@@ -80,7 +75,6 @@ public class ClientService {
     }
 
     public List<Order> findAllUnpaidOrderByIdClients(long idClient) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             return clientDAO.findAllUnpaidOrderByIdClient(idClient);
         } catch (DaoException e) {
@@ -89,7 +83,6 @@ public class ClientService {
     }
 
     public List<Client> findAllClientsByIdTrainer(long idTrainer) throws LogicException {
-        ClientDao clientDAO = new ClientDaoImpl();
         try {
             return clientDAO.findAllClientsByIdTrainer(idTrainer);
         } catch (DaoException e) {

@@ -15,6 +15,9 @@ public class HelloUserTag extends TagSupport {
     private static final String ADMIN_ROLE = "admin";
     private static final String TRAINER_ROLE = "trainer";
     private static final String EN_US = "en_US";
+    private static final String RU_ru = "ru_RU";
+    private static final String BY_BE = "be_BY";
+    private static final String DE_DE = "de_DE";
 
     private User user;
 
@@ -28,9 +31,13 @@ public class HelloUserTag extends TagSupport {
         Locale current;
         if (EN_US.equals(locale)) {
             current = new Locale("en", "US");
-        } else {
+        }else if (RU_ru.equals(locale)) {
             current = new Locale("ru", "RU");
-        }
+        }else if (BY_BE.equals(locale)) {
+            current = new Locale("be", "BY");
+        }else
+            current = new Locale("de", "DE");
+
 
         ResourceBundle bundle = ResourceBundle.getBundle(LOCALE, current);
         StringBuilder buffer = new StringBuilder();
